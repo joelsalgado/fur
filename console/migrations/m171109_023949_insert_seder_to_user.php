@@ -12,7 +12,7 @@ class m171109_023949_insert_seder_to_user extends Migration
      */
     public function safeUp()
     {
-        $this->insert('user',[
+        $this->insert('USERS_BACKEND',[
                 'username' => 'admin',
                 'auth_key' => Yii::$app->security->generateRandomString(),
                 'password_hash' => Yii::$app->security->generatePasswordHash('12345'),

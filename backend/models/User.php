@@ -25,7 +25,7 @@ class User extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'user';
+        return 'USERS';
     }
 
     /**
@@ -34,7 +34,7 @@ class User extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['username', 'email','password_hash'], 'required'],
+            [['username', 'email','PASSWORD_HASH'], 'required'],
             [['username', 'email'] ,'unique'],
             [['username'], 'string', 'max' => 32],
             [['email'], 'string', 'max' => 255],
@@ -51,7 +51,7 @@ class User extends \yii\db\ActiveRecord
             'id' => 'ID',
             'username' => 'Username',
             'auth_key' => 'Auth Key',
-            'password_hash' => 'Password',
+            'PASSWORD_HASH' => 'Password',
             'password_reset_token' => 'Password Reset Token',
             'email' => 'Email',
             'status' => 'Status',

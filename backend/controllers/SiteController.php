@@ -56,6 +56,7 @@ class SiteController extends RbacValidationController
      */
     public function actionIndex()
     {
+        
         return $this->render('index');
     }
 

@@ -6,8 +6,9 @@ use Yii;
 use app\models\User;
 use yii\data\ActiveDataProvider;
 use yii\web\NotFoundHttpException;
+use yii\web\Controller;
     
-class UserController extends RbacValidationController {
+class UserController extends Controller {
     private $data;
     
     private function getAvailablePermissions() {
